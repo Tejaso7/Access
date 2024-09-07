@@ -34,15 +34,41 @@
 
 
   <style>
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-      border-radius: 10px; /* Rounded corners */
-      padding: 20px; /* Padding around content */
-      backdrop-filter: blur(10px); /* Applies blur effect */
-      -webkit-backdrop-filter: blur(10px); /* Safari support */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
-      color:black; /* Text color for contrast */
-      text-align: center; /* Center text alignment */
+    #header {
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header .logo img {
+      max-height: 50px;
+    }
+
+    .navmenu ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navmenu ul li {
+      list-style: none;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    .navmenu ul li a:hover {
+      color: #0056b3;
+    }
+ 
+
+    .text-center {
+      text-align: center;
     }
     .img-frame {
       display: inline-block; /* Ensure the image frame does not take up the full width */
