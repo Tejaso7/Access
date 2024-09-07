@@ -18,6 +18,67 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/img/logo.png" rel="icon">
+  <style>
+    .termscontainer{
+
+      background-color: #f7f7f7;
+      padding: 50px 0;
+      text-align: left;
+      margin-top: 30px;
+    }
+    /* Container Styling */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text Alignment in Container */
+.container h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.container ul {
+  padding-left: 20px;
+}
+
+.container ul li {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .container h2 {
+    font-size: 28px;
+  }
+
+  .container p, .container ul li {
+    font-size: 14px;
+  }
+}
+
+  </style>
 </head>
 
 <body>
@@ -41,7 +102,7 @@
 
   <!-- Terms and Conditions Content -->
   <main id="main" class="main">
-    <section id="terms" class="terms py-5">
+    <section id="terms" class="terms py-5 termscontainer">
       <div class="container">
         <h2 class="text-center">Terms and Conditions</h2>
         <p>Last updated: 09/08/2024</p>
