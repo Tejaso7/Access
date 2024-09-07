@@ -79,13 +79,23 @@
     .col-lg-6 {
       padding: 15px; /* Adjust padding as needed */
     }
-
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px; /* Padding around content */
+      backdrop-filter: blur(10px); /* Applies blur effect */
+      -webkit-backdrop-filter: blur(10px); /* Safari support */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+      color:black; /* Text color for contrast */
+      text-align: center; /* Center text alignment */
+    }
+    
     </style>
  
  
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top navbar-glass" style="padding:0px">
+  <header id="header" class="header d-flex align-items-center sticky-top glass-effect" style="padding:0px">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
