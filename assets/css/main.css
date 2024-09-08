@@ -919,7 +919,7 @@ section,
 }
 
 .alt-services .service-item:hover .details h3 {
-  color: var(--accent-color);
+  color:black;
 }
 
 .alt-services .service-item:hover .img img {
