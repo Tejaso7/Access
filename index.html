@@ -214,11 +214,7 @@
         </div>
       </div>
       
-      <div class="row mt-4">
-        <div class="col text-center">
-          <p>We provide email contacts of CEOs and MDs with a 500-email package under 1000 INR. It's a smart shortcut to shortlist yourself. Try it once!</p>
-        </div>
-      </div>
+       
     </div>
   
   </section>
@@ -262,7 +258,7 @@
       <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400">
         <div class="service-item position-relative">
           <div class="img">
-            <img src="assets/img/mail.jpg" class="img-fluid" alt="">
+            <img src="assets/img/sub.jpg" class="img-fluid" alt="">
           </div>
           <div class="details glass">
             <a   class="stretched-link">
@@ -275,7 +271,7 @@
       <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="500">
         <div class="service-item position-relative">
           <div class="img">
-            <img  src="assets/img/res.jpg" class="img-fluid" alt="">
+            <img  src="assets/img/resu.jpg" class="img-fluid" alt="">
           </div>
           <div class="details  glass">
             <a   class="stretched-link ">
@@ -499,7 +495,7 @@
             <div class="testimonial-item">
               <img src="assets/img/testimonials/shubham.jpeg" class="testimonial-img" alt="">
               <h3>Shubham</h3>
-              <h4>Wordpress Developer</h4>
+              <h4>AIML Engineer</h4>
               <div class="stars">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
@@ -517,7 +513,7 @@
             <div class="testimonial-item">
               <img src="assets/img/testimonials/3.jpg" class="testimonial-img" alt="">
               <h3>Pritam</h3>
-              <h4>QA at FirstBit</h4>
+              <h4>Data Engineer at FirstBit</h4>
               <div class="stars">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
@@ -904,9 +900,12 @@
   </div>
 </div>
 <script>
-  document.addEventListener('fullscreenchange', function() {
-    const videoContainer = document.querySelector('.video-container');
-    const video = videoContainer.querySelector('video'); // Assuming the video is inside .video-container
+document.addEventListener('fullscreenchange', function() {
+  // Select all video containers
+  const videoContainers = document.querySelectorAll('.video-container');
+  
+  videoContainers.forEach(function(videoContainer) {
+    const video = videoContainer.querySelector('video'); // Select video inside the current container
 
     // Store initial styles if they haven't been stored yet
     if (!video.dataset.initialWidth) {
@@ -916,7 +915,7 @@
       video.dataset.initialObjectFit = video.style.objectFit || 'fill'; // Default to 'fill' if none is set
     }
 
-    if (document.fullscreenElement) {
+    if (document.fullscreenElement && document.fullscreenElement === videoContainer) {
       // Apply styles for fullscreen mode
       video.style.objectFit = 'contain'; // Prevent the video from being zoomed in (fits the area without cropping)
       video.style.padding = '2px'; // Add 2px padding around the video
@@ -932,6 +931,7 @@
       videoContainer.style.border = '2px solid black'; // Reset border if necessary
     }
   });
+});
 </script>
 
 
