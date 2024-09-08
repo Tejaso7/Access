@@ -79,8 +79,37 @@
       border: 2px solid black;
       border-radius: 25px;
       overflow: hidden;
+    }/* Container for responsive video */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      border: 2px solid black;
+      border-radius: 25px;
+      overflow: hidden;
     }
-
+    
+    /* Responsive video */
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure video covers the container */
+    }
+    
+    /* Media query for fullscreen adjustments on mobile */
+    @media (max-width: 768px) {
+      .video-container {
+        padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+      }
+    
+      .video-container video {
+        object-fit: cover;
+      }
+    }
+    
     /* Responsive video */
     .video-container video {
       position: absolute;
@@ -983,7 +1012,15 @@
 
 <!-- Preloader -->
 <div id="preloader"></div>
-
+<script> document.addEventListener('fullscreenchange', function() {
+  const videoContainer = document.querySelector('.video-container');
+  if (document.fullscreenElement) {
+    videoContainer.style.border = 'none'; // Adjust styling if needed
+  } else {
+    videoContainer.style.border = '2px solid black'; // Reset styling
+  }
+});
+</script>
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
