@@ -806,7 +806,7 @@
 
 <footer id="footer" class="footer">
   <div class="container">
-    <div class="row">
+    <div class="row d-none d-md-flex"> <!-- Visible only on medium+ screens (PC View) -->
       
       <!-- Logo and Contact Information -->
       <div class="col-lg-4 col-md-6 col-sm-12 footer-contact mb-4">
@@ -844,6 +844,47 @@
       </div>
     </div>
 
+    <!-- Mobile View Footer -->
+    <div class="row d-md-none"> <!-- Visible only on small screens (Mobile View) -->
+
+      <div class="col-12 mb-4">
+        <div class="d-flex flex-column flex-sm-row justify-content-between"> <!-- Horizontal layout for mobile -->
+          <!-- Contact Information -->
+          <div class="footer-contact mb-4 mb-sm-0">
+            <h3><img src="assets/img/logo.jpg" alt="AccessMail Logo" style="max-width: 80px;"></h3>
+            <p>
+              A108 Adam Street<br>
+              New Delhi, 535022<br>
+              India<br><br>
+              <strong>Phone:</strong> +91 7058532759<br>
+              <strong>Email:</strong> accessmail@gmail.com<br>
+            </p>
+          </div>
+
+          <!-- Useful Links -->
+          <div class="footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="Privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="col-12 text-center mb-4">
+        <h4>Follow Us</h4>
+        <div class="social-links mt-3">
+          <a href="https://www.linkedin.com/company/accessmails/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
     <div class="text-center mt-4">
       <p>© <span>Copyright</span> <strong>@AccessMails</strong> <span>All Rights Reserved</span></p>
       <p><a href="Privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
@@ -851,13 +892,14 @@
   </div>
 </footer>
 
+
 <!-- Scroll Top -->
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Preloader -->
 <div id="preloader">
   <div class="loader-container">
-    <div class="loader-border" style="padding:5px;"></div> <!-- This is the rotating border -->
+    <div class="loader-border" style="padding:5px"></div> <!-- This is the rotating border -->
     <div class="loader-text">AccessMails</div> <!-- This is the static text -->
   </div>
 </div>
