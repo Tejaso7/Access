@@ -434,8 +434,8 @@ h6 {
 
 #preloader .loader-container {
   position: relative;
-  width: 100px; /* Slightly larger to give space to the text and border */
-  height: 100px;
+  width: 120px; /* Slightly larger to give space to the text and border */
+  height: 120px;
 }
 
 #preloader .loader-border {
