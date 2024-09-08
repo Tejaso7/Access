@@ -897,7 +897,7 @@ section,
   bottom: 20px;
   padding: 30px;
   transition: all ease-in-out 0.3s;
-  background: color-mix(in srgb, var(--contrast-color), transparent 5%);
+  background: color-mix(in srgb, var(--contrast-color), transparent 90%);
   text-align: center;
   border-radius: 8px;
   box-shadow: 0px 0 25px color-mix(in srgb, var(--default-color), transparent 92%);
