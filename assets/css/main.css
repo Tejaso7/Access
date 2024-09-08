@@ -2038,7 +2038,7 @@ section,
   .intro-title {
     font-family: 'Verdana', sans-serif; /* Different font family */
     font-size: 2em; /* Larger size for a more prominent title */
-    font-weight: 10; /* Stronger bold weight */
+    font-weight:5; /* Stronger bold weight */
     color: #4682B4; /* Steel blue color */
     text-transform: uppercase; /* Uppercase letters for a strong impression */
     letter-spacing: 1px; /* Slightly increased letter spacing */
