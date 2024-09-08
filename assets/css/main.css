@@ -1709,3 +1709,35 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+/* Mobile responsiveness for the footer */
+@media (max-width: 768px) {
+  #footer .footer-contact, 
+  #footer .footer-links {
+    text-align: center;
+  }
+
+  #footer ul {
+    padding-left: 0;
+  }
+
+  #footer ul li {
+    list-style: none;
+  }
+
+  #footer .social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #footer h3 img {
+    max-width: 100px;
+  }
+  
+  #footer .text-center {
+    font-size: 14px;
+  }
+}
