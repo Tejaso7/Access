@@ -855,16 +855,26 @@
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Preloader -->
-<div id="preloader"></div>
-<script> document.addEventListener('fullscreenchange', function() {
-  const videoContainer = document.querySelector('.video-container');
-  if (document.fullscreenElement) {
-    videoContainer.style.border = 'none'; // Adjust styling if needed
-  } else {
-    videoContainer.style.border = '2px solid black'; // Reset styling
-  }
-});
-</script>
+<div id="preloader">AccessMails</div>
+<script>
+  document.addEventListener('fullscreenchange', function() {
+    const videoContainer = document.querySelector('.video-container');
+    const video = videoContainer.querySelector('video'); // Assuming the video is inside .video-container
+  
+    if (document.fullscreenElement) {
+      video.style.objectFit = 'none'; // This will prevent the video from fitting the screen
+      video.style.width = 'auto'; // Keep the video width as it is
+      video.style.height = 'auto'; // Keep the video height as it is
+      videoContainer.style.border = 'none'; // Adjust styling if needed
+    } else {
+      video.style.objectFit = ''; // Reset any changes
+      video.style.width = ''; // Reset width
+      video.style.height = ''; // Reset height
+      videoContainer.style.border = '2px solid black'; // Reset styling
+    }
+  });
+  </script>
+  
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
