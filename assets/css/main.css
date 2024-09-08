@@ -2034,18 +2034,5 @@ section,
 
  
   
-  /* For mobile view */
-  @media (max-width: 768px) {
-    .video-container {
-      padding: 0;            /* Remove padding for mobile view */
-      width: 100%;           /* Ensure video takes full width of container on small screens */
-      height: auto;       
-    }
-  
-    .video-container video {
-      width: 100%;           /* Ensure video takes full width of container on small screens */
-      height: auto;
-      object-fit: contain;    /* Ensure the video does not stretch */
-    }
-  }
+ 
   
