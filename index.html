@@ -916,16 +916,16 @@
       if (document.fullscreenElement && document.fullscreenElement === videoContainer) {
         // Fullscreen mode
         video.style.objectFit = 'contain'; // Ensure video fits within the screen without stretching
-        video.style.padding = '2px';
+        video.style.padding = '4px';
         video.style.width = 'calc(100% - 4px)'; // Width including padding
         video.style.height = 'calc(100% - 4px)'; // Height including padding
         videoContainer.style.border = 'none';
       } else {
         // Exiting fullscreen or normal mode
-        video.style.objectFit = video.dataset.initialObjectFit; // Reset object-fit
-        video.style.padding = video.dataset.initialPadding; // Reset padding
-        video.style.width = video.dataset.initialWidth; // Reset width
-        video.style.height = video.dataset.initialHeight; // Reset height
+        video.style.objectFit = 'contain'; // Ensure video fits within the screen without stretching
+        video.style.padding = '4px';
+        video.style.width = '75%'; // Width including padding
+        video.style.height = '75%';
         videoContainer.style.border = '2px solid black'; // Reset border if needed
       }
     });
