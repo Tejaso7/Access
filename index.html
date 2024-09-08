@@ -857,7 +857,7 @@
 <!-- Preloader -->
 <div id="preloader">
   <div class="loader-container">
-    <div class="loader-border"></div> <!-- This is the rotating border -->
+    <div class="loader-border" style="padding:5px;"></div> <!-- This is the rotating border -->
     <div class="loader-text">AccessMails</div> <!-- This is the static text -->
   </div>
 </div>
@@ -866,23 +866,32 @@
     const videoContainer = document.querySelector('.video-container');
     const video = videoContainer.querySelector('video'); // Assuming the video is inside .video-container
 
+    // Store initial styles if they haven't been stored yet
+    if (!video.dataset.initialWidth) {
+      video.dataset.initialWidth = video.style.width || 'auto';
+      video.dataset.initialHeight = video.style.height || 'auto';
+      video.dataset.initialPadding = video.style.padding || '0px';
+      video.dataset.initialObjectFit = video.style.objectFit || 'fill'; // Default to 'fill' if none is set
+    }
+
     if (document.fullscreenElement) {
       // Apply styles for fullscreen mode
-      video.style.objectFit = 'contain'; // Prevents the video from being zoomed in (it will fit the available area without cropping)
-      video.style.padding = '2px'; // Adds 2px padding around the video
-      video.style.width = 'calc(100% - 4px)'; // Ensures video width takes up the screen width minus the padding (2px on each side)
-      video.style.height = 'calc(100% - 4px)'; // Ensures video height takes up the screen height minus the padding (2px on top and bottom)
+      video.style.objectFit = 'contain'; // Prevent the video from being zoomed in (fits the area without cropping)
+      video.style.padding = '2px'; // Add 2px padding around the video
+      video.style.width = 'calc(100% - 4px)'; // Width accounting for padding
+      video.style.height = 'calc(100% - 4px)'; // Height accounting for padding
       videoContainer.style.border = 'none'; // Adjust styling if needed
     } else {
-      // Reset styles when exiting fullscreen
-      video.style.objectFit = 'contain'; // Reset any changes
-      video.style.padding = '5px'; // Reset padding
-      video.style.width = '75%'; // Reset width
-      video.style.height = '75%'; // Reset height
-      videoContainer.style.border = '2px solid black'; // Reset styling
+      // Reset to the original styles when exiting fullscreen
+      video.style.objectFit = video.dataset.initialObjectFit; // Reset object-fit
+      video.style.padding = video.dataset.initialPadding; // Reset padding
+      video.style.width = video.dataset.initialWidth; // Reset width
+      video.style.height = video.dataset.initialHeight; // Reset height
+      videoContainer.style.border = '2px solid black'; // Reset border if necessary
     }
   });
 </script>
+
 
   
 <!-- Vendor JS Files -->
