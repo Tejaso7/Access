@@ -271,7 +271,7 @@
       <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="500">
         <div class="service-item position-relative">
           <div class="img">
-            <img  src="assets/img/resu.jpg" class="img-fluid" alt="">
+            <img  src="assets/img/res.gif" class="img-fluid" alt="">
           </div>
           <div class="details  glass">
             <a   class="stretched-link ">
@@ -900,38 +900,38 @@
   </div>
 </div>
 <script>
-document.addEventListener('fullscreenchange', function() {
-  // Select all video containers
-  const videoContainers = document.querySelectorAll('.video-container');
+  document.addEventListener('fullscreenchange', function() {
+    const videoContainers = document.querySelectorAll('.video-container');
+    
+    videoContainers.forEach(function(videoContainer) {
+      const video = videoContainer.querySelector('video');
   
-  videoContainers.forEach(function(videoContainer) {
-    const video = videoContainer.querySelector('video'); // Select video inside the current container
-
-    // Store initial styles if they haven't been stored yet
-    if (!video.dataset.initialWidth) {
-      video.dataset.initialWidth = video.style.width || 'auto';
-      video.dataset.initialHeight = video.style.height || 'auto';
-      video.dataset.initialPadding = video.style.padding || '0px';
-      video.dataset.initialObjectFit = video.style.objectFit || 'fill'; // Default to 'fill' if none is set
-    }
-
-    if (document.fullscreenElement && document.fullscreenElement === videoContainer) {
-      // Apply styles for fullscreen mode
-      video.style.objectFit = 'contain'; // Prevent the video from being zoomed in (fits the area without cropping)
-      video.style.padding = '2px'; // Add 2px padding around the video
-      video.style.width = 'calc(100% - 4px)'; // Width accounting for padding
-      video.style.height = 'calc(100% - 4px)'; // Height accounting for padding
-      videoContainer.style.border = 'none'; // Adjust styling if needed
-    } else {
-      // Reset to the original styles when exiting fullscreen
-      video.style.objectFit = video.dataset.initialObjectFit; // Reset object-fit
-      video.style.padding = video.dataset.initialPadding; // Reset padding
-      video.style.width = video.dataset.initialWidth; // Reset width
-      video.style.height = video.dataset.initialHeight; // Reset height
-      videoContainer.style.border = '2px solid black'; // Reset border if necessary
-    }
+      // Store initial styles if they haven't been stored yet
+      if (!video.dataset.initialWidth) {
+        video.dataset.initialWidth = video.style.width || 'auto';
+        video.dataset.initialHeight = video.style.height || 'auto';
+        video.dataset.initialPadding = video.style.padding || '0px';
+        video.dataset.initialObjectFit = video.style.objectFit || 'contain'; // Default to 'contain' for mobile and smaller screens
+      }
+  
+      if (document.fullscreenElement && document.fullscreenElement === videoContainer) {
+        // Fullscreen mode
+        video.style.objectFit = 'contain'; // Ensure video fits within the screen without stretching
+        video.style.padding = '2px';
+        video.style.width = 'calc(100% - 4px)'; // Width including padding
+        video.style.height = 'calc(100% - 4px)'; // Height including padding
+        videoContainer.style.border = 'none';
+      } else {
+        // Exiting fullscreen or normal mode
+        video.style.objectFit = video.dataset.initialObjectFit; // Reset object-fit
+        video.style.padding = video.dataset.initialPadding; // Reset padding
+        video.style.width = video.dataset.initialWidth; // Reset width
+        video.style.height = video.dataset.initialHeight; // Reset height
+        videoContainer.style.border = '2px solid black'; // Reset border if needed
+      }
+    });
   });
-});
+  
 </script>
 
 

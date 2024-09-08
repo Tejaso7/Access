@@ -2031,3 +2031,32 @@ section,
   .text-center {
     text-align: center;
   }
+
+
+  .video-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the video */
+    align-items: center;     /* Vertically center the video */
+    height: auto;
+    padding: 10px;
+  }
+  
+  .video-container video {
+    max-width: 100%;        /* Make sure the video fits the container */
+    height: auto;           /* Maintain aspect ratio */
+    object-fit: contain;    /* Contain the video within its container */
+  }
+  
+  /* For mobile view */
+  @media (max-width: 768px) {
+    .video-container {
+      padding: 0;            /* Remove padding for mobile view */
+    }
+  
+    .video-container video {
+      width: 100%;           /* Ensure video takes full width of container on small screens */
+      height: auto;
+      object-fit: contain;    /* Ensure the video does not stretch */
+    }
+  }
+  
