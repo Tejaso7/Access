@@ -427,30 +427,52 @@ h6 {
   overflow: hidden;
   background: var(--background-color);
   transition: all 0.6s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#preloader:before {
-  content: "AccessMails";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
+#preloader .loader-container {
+  position: relative;
+  width: 80px; /* Slightly larger to give space to the text and border */
+  height: 80px;
+}
+
+#preloader .loader-border {
+  position: absolute;
+  top: 0;
+  left: 0;
   border: 6px solid #ffffff;
   border-color: var(--accent-color) transparent var(--accent-color) transparent;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 100%;
   animation: animate-preloader 1s linear infinite;
 }
 
+#preloader .loader-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+/* Animation for the border only */
 @keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
+
+
+ 
 
 /*--------------------------------------------------------------
 # Scroll Top Button

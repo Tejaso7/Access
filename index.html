@@ -87,8 +87,8 @@
     </div>
   </div>
 </section>
-<div style="display: flex; justify-content: center; margin-right: 50px;">
-  <h5>Top Startups at Your Fingertips</h5>
+<div class="section-title" style="display: flex; justify-content: center; margin-right: 50px;">
+  <h2>Top Startups at Your Fingertips</h2>
 </div>
 
  <!-- Clients Section -->
@@ -855,25 +855,35 @@
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Preloader -->
-<div id="preloader"> </div>
+<div id="preloader">
+  <div class="loader-container">
+    <div class="loader-border"></div> <!-- This is the rotating border -->
+    <div class="loader-text">AccessMails</div> <!-- This is the static text -->
+  </div>
+</div>
 <script>
   document.addEventListener('fullscreenchange', function() {
     const videoContainer = document.querySelector('.video-container');
     const video = videoContainer.querySelector('video'); // Assuming the video is inside .video-container
-  
+
     if (document.fullscreenElement) {
-      video.style.objectFit = 'none'; // This will prevent the video from fitting the screen
-      video.style.width = 'auto'; // Keep the video width as it is
-      video.style.height = 'auto'; // Keep the video height as it is
+      // Apply styles for fullscreen mode
+      video.style.objectFit = 'contain'; // Prevents the video from being zoomed in (it will fit the available area without cropping)
+      video.style.padding = '2px'; // Adds 2px padding around the video
+      video.style.width = 'calc(100% - 4px)'; // Ensures video width takes up the screen width minus the padding (2px on each side)
+      video.style.height = 'calc(100% - 4px)'; // Ensures video height takes up the screen height minus the padding (2px on top and bottom)
       videoContainer.style.border = 'none'; // Adjust styling if needed
     } else {
-      video.style.objectFit = ''; // Reset any changes
-      video.style.width = ''; // Reset width
-      video.style.height = ''; // Reset height
+      // Reset styles when exiting fullscreen
+      video.style.objectFit = 'contain'; // Reset any changes
+      video.style.padding = '5px'; // Reset padding
+      video.style.width = '75%'; // Reset width
+      video.style.height = '75%'; // Reset height
       videoContainer.style.border = '2px solid black'; // Reset styling
     }
   });
-  </script>
+</script>
+
   
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
