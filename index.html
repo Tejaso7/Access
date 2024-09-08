@@ -55,6 +55,22 @@
       height: 100%;
       border: none; /* Removes default border */
     }
+
+
+    .img-frame {
+      display: inline-block; /* Ensure the image frame does not take up the full width */
+      border: 5px solid #000; /* Solid border around the image */
+      border-radius: 10px; /* Rounded corners for the frame */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for a 3D effect */
+      overflow: hidden; /* Ensures the rounded corners are applied to the image */
+    }
+    
+    .img-frame img {
+      display: block; /* Remove extra space below the image */
+      width: 100%; /* Ensure the image fills the container */
+      height: auto; /* Maintain the aspect ratio of the image */
+    }
+
     /* Container for responsive video */
     .video-container {
       position: relative;
@@ -508,20 +524,39 @@
     
         <div class="row gy-4 justify-content-center"> <!-- Added justify-content-center to center the div -->
       
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200" style="text-align: center;"> <!-- text-align center for alignment -->
-            <div class="pricing-item featured">
-              <h3>Standard Plan</h3>
-              <h4><sup>₹</sup>1000<span> / 1000 mails </span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Includes Free Plan features</span></li>
-                <li><i class="bi bi-check"></i> <span>50 additional emails and more services</span></li>
-                <li><i class="bi bi-check"></i> <span>Enhanced customer support</span></li>
-              </ul>
-              <a href="plan.html" class="buy-btn">Get Started</a>
-            </div>
-          </div><!-- End Pricing Item -->
-      
-        </div>
+          <main id="main" class="main">
+            <section id="job-roles" class="job-roles d-flex flex-column align-items-center justify-content-center">
+              <div class="container text-center">
+                <h2>Select Your Job Role</h2>
+                <p class="lead">Choose between Data Science and Development roles, and explore the career opportunities that await you.</p>
+        
+                <div class="row mt-5">
+                  <div class="col-lg-6" >
+                    <div class="role-box p-4 shadow rounded">
+                      <h3>Data Science</h3>
+                      <div class="img-frame">
+                        <img src="assets/img/data.jpg">
+                      </div>
+                      <p>Become a Data Scientist and leverage AI to uncover insights and drive decisions. Get in touch with industry experts and start your journey in the world of data.</p>
+                     
+                      <a href="plana.html" class="btn btn-primary mt-3">Explore Data Science</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-6"  data-aos-delay="100">
+                    <div class="role-box p-4 shadow rounded">
+                      <h3>Development</h3>
+                      <div class="img-frame">
+                        <img src="assets/img/dev.jpg">
+                      </div>
+                      <p>Pursue a career in Web Development, Software Engineering, and more. Build and maintain systems that power businesses around the world.</p>
+                     
+                      <a href="planb.html" class="btn btn-primary mt-3">Explore Development</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
       
       </div>
       
