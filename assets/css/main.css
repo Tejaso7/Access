@@ -2038,11 +2038,12 @@ section,
   .intro-title {
     font-family: 'Verdana', sans-serif; /* Different font family */
     font-size: 1em; /* Larger size for a more prominent title */
-    font-weight:50; /* Stronger bold weight */
+    font-weight: bold;
     color: #4682B4; /* Steel blue color */
     text-transform: uppercase; /* Uppercase letters for a strong impression */
     letter-spacing: 1px; /* Slightly increased letter spacing */
     border-bottom: 8px solid #4682B4; /* Underline with the same color as the text */
     padding: 10px; /* Space between text and underline */
     margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
