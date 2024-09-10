@@ -2059,17 +2059,17 @@ section,
   position: absolute;
   width: 100%;
   white-space: nowrap;
-  animation: slideText 30s linear infinite; /* Slower animation */
+  animation: slideText 40s linear infinite; /* Slower animation */
 }
 
 .moving-text p {
-  font-size: 48px; /* Increased font size */
+  font-size: 98px; /* Increased font size */
   font-weight: bold;
   display: inline-block;
   padding-left: 100%;
 
   /* Stroke and text color styling */
-  color: rgba(146, 29, 29, 0.5); /* #921D1D00 equivalent, transparent color */
+  color: rgba(146, 29, 29, 0); /* #921D1D00 equivalent, transparent color */
   -webkit-text-stroke-width: 1px; /* Increased stroke width for bigger text */
   -webkit-text-stroke-color: #1D1D1D;
   stroke-width: 1px;
