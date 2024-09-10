@@ -2073,10 +2073,16 @@ section,
 
 .moving-text p {
   font-size: 24px;
-  color: #333;
   font-weight: bold;
   display: inline-block;
   padding-left: 100%;
+
+  /* Stroke and text color styling */
+  color: rgba(146, 29, 29, 0); /* #921D1D00 equivalent, transparent color */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #1D1D1D;
+  stroke-width: 0.5px;
+  stroke: #1D1D1D;
 }
 
 @keyframes slideText {
