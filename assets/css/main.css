@@ -2053,27 +2053,32 @@ section,
     -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
 }
 
- 
-
-.moving-text {
-  position: absolute;
-  width: 100%;
-  white-space: nowrap;
-  animation: slideText 40s linear infinite; /* Slower animation */
+#stats {
+  position: relative;
+  z-index: 1;
+  background-color: #f4f4f4;
 }
 
-.moving-text p {
-  font-size: 98px; /* Increased font size */
-  font-weight: bold;
-  display: inline-block;
-  padding-left: 100%;
+.moving-text-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Moves the text behind the rest of the content */
+}
 
-  /* Stroke and text color styling */
-  color: rgba(146, 29, 29, 0); /* #921D1D00 equivalent, transparent color */
-  -webkit-text-stroke-width: 1px; /* Increased stroke width for bigger text */
+.moving-text-background p {
+  font-size: calc(2vw + 12px); /* Responsive font size */
+  font-weight: bold;
+  white-space: nowrap;
+  color: rgba(146, 29, 29, 0); /* Transparent fill */
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #1D1D1D;
   stroke-width: 1px;
   stroke: #1D1D1D;
+  animation: slideText 30s linear infinite;
 }
 
 @keyframes slideText {
@@ -2082,5 +2087,11 @@ section,
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .moving-text-background p {
+    font-size: calc(1.5vw + 8px); /* Adjust font size for smaller screens */
   }
 }
