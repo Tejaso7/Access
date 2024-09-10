@@ -2095,3 +2095,6 @@ section,
     font-size: calc(1.5vw + 8px); /* Adjust font size for smaller screens */
   }
 }
+section:nth-child() {
+  background-color: lightblue;
+}
