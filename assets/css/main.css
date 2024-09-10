@@ -1997,7 +1997,7 @@ section,
   }
   #header {
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.077);
     padding: 20px;
     position: sticky;
     top: 0;
@@ -2005,7 +2005,7 @@ section,
   }
 
   .header .logo img {
-    max-height: 50px;
+    max-height: 70px;
   }
 
   .navmenu ul {
@@ -2019,7 +2019,7 @@ section,
 
   .navmenu ul li a {
     text-decoration: none;
-    font-weight: bold;
+  
     color: black;
   }
 
