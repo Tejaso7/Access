@@ -2069,13 +2069,13 @@ section,
 }
 
 .moving-text-background p {
-  font-size: calc(2vw + 12px); /* Responsive font size */
-  font-weight: bold;
+  font-size: calc(2vw + 14px); /* Responsive font size */
+  
   white-space: nowrap;
   color: color-mix(in srgb, var(--default-color), transparent 90%);
   /* Transparent fill */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #1D1D1D;
+  -webkit-text-stroke-color: #1d1d1d00;
   stroke-width: 1px;
   stroke: #1D1D1D;
   animation: slideText 30s linear infinite;
