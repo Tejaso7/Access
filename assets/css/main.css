@@ -2097,3 +2097,37 @@ section,
 section:nth-child() {
   background-color: lightblue;
 }
+
+ /* Ensures all icon-boxes have equal height */
+ .icon-box {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px; /* Set a minimum height for consistency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensures the image is responsive */
+.icon-box img {
+  margin-bottom: 15px;
+}
+
+.icon-box h4 {
+  margin: 10px 0;
+}
+
+.icon-box p {
+  margin-top: auto;
+}
+
+/* Responsive layout for different screen sizes */
+@media (max-width: 768px) {
+  .icon-box {
+      min-height: auto;
+      margin-bottom: 20px;
+  }
+}
