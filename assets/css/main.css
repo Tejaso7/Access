@@ -2032,7 +2032,22 @@ section,
     text-align: center;
   }
 
- 
+  .int {
+    font-family: 'Verdana', sans-serif; /* Different font family */
+    font-size: 1em; /* Larger size for a more prominent title */
+    color: transparent; /* Text color is made transparent for gradient effect */
+    text-transform: uppercase; /* Uppercase letters for a strong impression */
+    letter-spacing: 1px; /* Slightly increased letter spacing */
+    border-bottom: 8px solid #4682B4; /* Underline with the same color as the text */
+    padding: 10px; /* Space between text and underline */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    /* Gradient Text Effect */
+    background: linear-gradient(to right, #ADD8E6, #4682B4, #800080); /* Gradient from light blue to blue to purple */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
+}
   
  
   .intro-title {
@@ -2047,7 +2062,7 @@ section,
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
     /* Gradient Text Effect */
-    background: linear-gradient(to right, #ADD8E6, #4682B4, #800080); /* Gradient from light blue to blue to purple */
+    background: linear-gradient(to right, #000000, #000000, #000000); /* Gradient from light blue to blue to purple */
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
 }
