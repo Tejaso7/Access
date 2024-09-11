@@ -2132,3 +2132,20 @@ section:nth-child() {
       margin-bottom: 20px;
   }
 }
+.tsbtn {
+  background: linear-gradient(95.25deg, #b649ea 0.54%, #6c38ff 97.46%);
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 19.5px;
+  text-align: center;
+  color: var(--color-white);
+  border: none;
+  width: 258px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+}
