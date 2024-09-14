@@ -1849,22 +1849,14 @@ section,
   width: 100%; /* Ensure the image fills the container */
   height: auto; /* Maintain the aspect ratio of the image */
 }
-
-/* Container for responsive video */
+ /* Container for responsive video */
 .video-container {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  border: 2px solid black;
-  border-radius: 25px;
-  overflow: hidden;
-}/* Container for responsive video */
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  border: 2px solid black;
-  border-radius: 25px;
+  border: 5px solid #8f61f2; /* Solid border around the image */
+  border-radius: 10px; /* Rounded corners for the frame */
+  box-shadow: 0 4px 8px rgb(153, 100, 227); /* Shadow for a 3D effect */
   overflow: hidden;
 }
 
