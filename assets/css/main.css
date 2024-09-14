@@ -1860,6 +1860,19 @@ section,
   overflow: hidden;
 }
 
+.video-c {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  border: 5px solid #000000; /* Solid border around the image */
+  border-radius: 10px; /* Rounded corners for the frame */
+  box-shadow: 0 4px 8px rgba(60, 33, 97, 0.292); /* Shadow for a 3D effect */
+  overflow: hidden;
+}
+
+
+
+
 /* Responsive video */
 .video-container video {
   position: absolute;
@@ -1890,6 +1903,7 @@ section,
   height: 100%;
   object-fit: cover; /* Ensure video covers the container */
 }
+
 .purecounter {
   font-size: 2rem;
   font-weight: bold;
