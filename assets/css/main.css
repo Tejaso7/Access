@@ -1948,9 +1948,9 @@ section,
 }
 .img-frame {
   display: inline-block; /* Ensure the image frame does not take up the full width */
-  border: 5px solid #000; /* Solid border around the image */
+  border: 5px solid #8f61f2; /* Solid border around the image */
   border-radius: 10px; /* Rounded corners for the frame */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for a 3D effect */
+  box-shadow: 0 4px 8px rgb(153, 100, 227); /* Shadow for a 3D effect */
   overflow: hidden; /* Ensures the rounded corners are applied to the image */
 }
 
