@@ -1,3 +1,22 @@
+<?php
+// Path to the text file that stores the view count
+$file = 'views.txt';
+
+// Check if the file exists, create it if not
+if (!file_exists($file)) {
+    file_put_contents($file, 0); // Initialize the view count to 0
+}
+
+// Read the current view count
+$viewCount = (int)file_get_contents($file);
+
+// Increment the view count
+$viewCount++;
+
+// Write the new view count back to the file
+file_put_contents($file, $viewCount);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -829,6 +848,8 @@
     <div class="text-center mt-4">
       <p>© <span>Copyright</span> <strong>@AccessMails</strong> <span>All Rights Reserved</span></p>
       <p><a href="Privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+<p>This page has been viewed <span id="viewCount"><?php echo $viewCount; ?></span> times by all users.</p>
+
     </div>
   </div>
 </footer>
